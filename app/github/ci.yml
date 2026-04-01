@@ -1,0 +1,14 @@
+name: After CI
+
+on:
+  workflow_run:
+    workflows: ["CI Pipeline"]
+    types:
+      - completed
+
+jobs:
+  followup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "CI pipeline finished — running follow-up workflow."
