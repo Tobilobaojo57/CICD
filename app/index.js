@@ -1,1 +1,3 @@
-console.log("Hello from CI-triggered Docker app!");
+console.log("Docker is running correctly!");
+setInterval(() => {}, 1000); // keep container alive
+
